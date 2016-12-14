@@ -55,9 +55,17 @@
 
             <p></p>
 
-            Código:
+            Código antes de ES6:
             <pre><code class="javascript">
-  
+  function Gato(nombre, edad, raza){
+    this.nombre= nombre;
+    this.edad= edad;
+    this.raza = raza;         
+  }
+           
+  Gato.prototype.incrementarEdad = function(){
+    return this.edad+=1;         
+  }
             </code></pre> 
             
             Resultado:
@@ -66,7 +74,17 @@
             </code></pre> 
             Código:
             <pre><code class="javascript">
-  
+  class Gato{
+    constructor(nombre, edad, raza){
+    this.nombre= nombre;
+    this.edad= edad;
+    this.raza = raza;         
+    }
+    incrementarEdad(){
+      this.edad+=1;         
+    }        
+           
+  }
             </code></pre> 
             Resultado:
             <pre><code class="javascript">

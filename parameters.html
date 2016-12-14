@@ -55,22 +55,30 @@
 
             <p></p>
 
-            Código:
+            Código sin parametros por defecto:
             <pre><code class="javascript">
-  
+  function restaDe2Numeros(x,y){
+    x = x || 0;
+    y = y || 0;
+    return x - y; 
+  }
+  console.log(restaDe2Numeros());
             </code></pre> 
             
             Resultado:
             <pre><code class="javascript">
-  
+  >0
             </code></pre> 
-            Código:
+            Código con parametros por defecto:
             <pre><code class="javascript">
-  
+  function restaDe2Numeros(x=0,y=0){
+    return x - y; 
+  }
+  console.log(restaDe2Numeros());
             </code></pre> 
             Resultado:
             <pre><code class="javascript">
-  
+  >0
             </code></pre>
         </div>
     </main>

@@ -55,9 +55,19 @@
 
             <p></p>
 
-            Código:
+            Código antes de ES6 (Callback hell):
             <pre><code class="javascript">
-  
+  func1(function (value1) {
+    func2(value1, function (value2) {
+        func3(value2, function (value3) {
+            func4(value3, function (value4) {
+                func5(value4, function (value5) {
+                    // Do something with value 5
+                });
+            });
+        });
+     });
+  });
             </code></pre> 
             
             Resultado:
@@ -66,7 +76,13 @@
             </code></pre> 
             Código:
             <pre><code class="javascript">
-  
+  func1(value1)
+    .then(func2)
+    .then(func3)
+    .then(func4)
+    .then(func5, value5 => {
+        // Do something with value 5
+    });
             </code></pre> 
             Resultado:
             <pre><code class="javascript">

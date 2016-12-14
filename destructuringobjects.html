@@ -55,22 +55,27 @@
 
             <p></p>
 
-            Código:
+            Código desestructuracion de Objetos Antes:
             <pre><code class="javascript">
-  
+  var Thorin = {occupation:'dirigir compania', padre: 'Thrain'};
+  var Ocupacion = Thorin.occupation;
+  var Padre = Thorin.padre;
+  console.log(Ocupacion)
             </code></pre> 
             
             Resultado:
             <pre><code class="javascript">
-  
+  >dirigir compania
             </code></pre> 
             Código:
             <pre><code class="javascript">
-  
+  var Thorin = {occupation:'dirigir compania', padre: 'Thrain'};
+  let {Ocupacion,Padre}= Thorin;
+  console.log(Ocupacion);  
             </code></pre> 
             Resultado:
             <pre><code class="javascript">
-  
+  >dirigir compania
             </code></pre>
         </div>
     </main>

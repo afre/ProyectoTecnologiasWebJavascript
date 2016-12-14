@@ -55,18 +55,43 @@
 
             <p></p>
 
-            Código:
+            Código getter and setter:
             <pre><code class="javascript">
-  
+  //No se soportaban funciones de getter y setter
             </code></pre> 
             
             Resultado:
             <pre><code class="javascript">
-  
+  //Nada que mostrar
             </code></pre> 
-            Código:
+            Código getter and setter ECMAScript 6:
             <pre><code class="javascript">
-  
+  class Empleado {
+
+    constructor(nombre) {
+        this._nombre = nombre;
+    }
+
+    get nombre() {
+      if(this._nombre) {
+        return 'Mr. ' + this._nombre;  
+      } else {
+        return undefined;
+      }  
+    }
+
+    set name(nuevoNombre) {
+      if (nuevoNombre == this._nombre) {
+        console.log('Ya tenemos este nombre!');
+      } else if (nuevoNombre) {
+        this._nombre = nuevoNombre;
+      } else {
+        return false;
+      }
+    }
+}
+
+var emp = new Empleado("Emmet");
             </code></pre> 
             Resultado:
             <pre><code class="javascript">
